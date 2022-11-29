@@ -1,0 +1,152 @@
+@import url(./base.less);
+
+/* 定义基准字号 */
+@vw: 3.75vw;
+/* 定义主体颜色 */
+@color: #fb7299;
+
+/* 悬浮头部 */
+.suspension-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  /* 上边栏 */
+  .m-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 (12 / @vw) 0 (18 / @vw);
+    height: (44 / @vw);
+    .logo {
+      i {
+        color: @color;
+      }
+    }
+    .right {
+      display: flex;
+      .search {
+        width: (22 / @vw);
+        height: (22 / @vw);
+        i {
+          font-size: (22 / @vw);
+          color: #ccc;
+        }
+      }
+      .face {
+        width: (24 / @vw);
+        height: (24 / @vw);
+        margin: 0 (18 / @vw) 0 (21 / @vw);
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .download {
+        width: (72 / @vw);
+        height: (24 / @vw);
+      }
+    }
+  }
+
+  /* 主菜单 */
+  .channel-menu {
+    display: flex;
+    position: relative;
+    height: (40 / @vw);
+    border-bottom: 1px solid #f2f2f2;
+    .tabs {
+      flex: 1;
+      overflow: hidden;
+      .tabs-list {
+        display: flex;
+        a {
+          font-size: (14 / @vw);
+          padding: 0 (16 / @vw);
+          line-height: (40 / @vw);
+          /* 文字不换行 */
+          white-space: nowrap;
+        }
+        .active {
+          color: @color;
+        }
+        .line {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: (28 / @vw);
+          height: (2 / @vw);
+          border-bottom: 2px solid @color;
+          transform: translateX((16 / @vw));
+          border-radius: 1px;
+        }
+      }
+    }
+    .after {
+      width: (40 / @vw);
+      height: (40 / @vw);
+      text-align: center;
+      line-height: (40 / @vw);
+    }
+  }
+}
+
+/* 页面主体 */
+.m-home {
+  padding-top: (84 / @vw);
+  .video-list {
+    padding: 0 (5 / @vw);
+    display: flex;
+    flex-wrap: wrap;
+    .video-item {
+      width: 50%;
+      padding: (8 / @vw) (5 / @vw);
+      font-size: (12 / @vw);
+      .card {
+        position: relative;
+        height: (97 / @vw);
+        .count {
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: (28 / @vw);
+          padding: 0 (6 / @vw);
+          span {
+            color: #fff;
+          }
+        }
+      }
+      .title {
+        margin-top: (6 / @vw);
+      }
+    }
+  }
+}
+
+/* 悬浮底部 */
+.openapp {
+  position: fixed;
+  left: 0;
+  bottom: (30 / @vw);
+
+  width: 100%;
+  .app {
+    width: (351 / @vw);
+    height: (37 / @vw);
+    background-color: @color;
+    border-radius: (25 / @vw);
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    line-height: (37 / @vw);
+    font-size: (14 / @vw);
+    i {
+      position: relative;
+      top: (-1 / @vw);
+      margin-right: (10 / @vw);
+    }
+  }
+}

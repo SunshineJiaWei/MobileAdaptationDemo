@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游乐园首页</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- 图标文件 -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./lib/iconfont/iconfont.css">
+</head>
+
+<body>
+
+  <!-- 主体区域 -->
+  <main>
+    <!-- Banner模块 -->
+    <div class="banner">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./uploads/banner_1.png" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 活动标题模块 -->
+    <div class="title">
+      <h4>乐园活动</h4>
+    </div>
+
+    <!-- 活动选项模块 -->
+    <div class="item">
+      <div class="pic">
+        <a href="#">
+          <img src="./uploads/item_1.png" alt="">
+        </a>
+        <div class="status">进行中</div>
+        <div class="collect">
+          <i class="iconfont icon-shoucang1"></i>
+        </div>
+      </div>
+      <div class="info">
+        <h5>疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</h5>
+        <div class="rest">
+          <p><i class="iconfont icon-qizhi"></i> 200人已报名</p>
+          <p><i class="iconfont icon-shizhong"></i> 本周六开始</p>
+        </div>
+        <span>免费</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="pic">
+        <a href="#">
+          <img src="./uploads/item_2.png" alt="">
+        </a>
+        <div class="status">进行中</div>
+        <div class="collect">
+          <i class="iconfont icon-shoucang1"></i>
+        </div>
+      </div>
+      <div class="info">
+        <h5>疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</h5>
+        <div class="rest">
+          <p><i class="iconfont icon-qizhi"></i> 200人已报名</p>
+          <p><i class="iconfont icon-shizhong"></i> 本周六开始</p>
+        </div>
+        <span>免费</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="pic">
+        <a href="#">
+          <img src="./uploads/item_3.png" alt="">
+        </a>
+        <div class="status">进行中</div>
+        <div class="collect">
+          <i class="iconfont icon-shoucang1"></i>
+        </div>
+      </div>
+      <div class="info">
+        <h5>疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</h5>
+        <div class="rest">
+          <p><i class="iconfont icon-qizhi"></i> 200人已报名</p>
+          <p><i class="iconfont icon-shizhong"></i> 本周六开始</p>
+        </div>
+        <span>免费</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="pic">
+        <a href="#">
+          <img src="./uploads/item_4.png" alt="">
+        </a>
+        <div class="status">进行中</div>
+        <div class="collect">
+          <i class="iconfont icon-shoucang1"></i>
+        </div>
+      </div>
+      <div class="info">
+        <h5>疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</h5>
+        <div class="rest">
+          <p><i class="iconfont icon-qizhi"></i> 200人已报名</p>
+          <p><i class="iconfont icon-shizhong"></i> 本周六开始</p>
+        </div>
+        <span>免费</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 底部导航区域 -->
+  <footer class="toolbar">
+    <a href="#" class="current">
+      <i class="iconfont icon-index-copy"></i>
+      首页
+    </a>
+    <a href="#">
+      <i class="iconfont icon-youhuiquan"></i>
+      卡券
+    </a>
+    <a href="#">
+      <i class="iconfont icon-iconfront-"></i>
+      我的
+    </a>
+  </footer>
+
+  <script>
+    /* toolbar切换 */
+    let as = document.querySelectorAll('.toolbar a')
+    for (let i = 0; i < as.length; i++) {
+      as[i].addEventListener('click', function () {
+        document.querySelector('.toolbar .current').classList.remove('current')
+        this.classList.add('current')
+      })
+    }
+
+    /* 收藏按钮切换 */
+    let collects = document.querySelectorAll('.item .pic .collect i')
+    for (let i = 0; i < collects.length; i++) {
+      collects[i].addEventListener('click', function () {
+        if (this.className === 'iconfont icon-shoucang1') {
+          this.className = 'iconfont icon-shoucang'
+          this.style.color = '#FECA49'
+        } else {
+          this.className = 'iconfont icon-shoucang1'
+          this.style.color = '#fff'
+        }
+      })
+    }
+  </script>
+
+  <!-- 移动端适配文件 -->
+  <script src="./js/flexible.js"></script>
+</body>
+
+</html>
